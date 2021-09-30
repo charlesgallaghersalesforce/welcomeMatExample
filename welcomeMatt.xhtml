@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="cache-control" content="max-age=0" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff" http-equiv="Content-Type" />
+
+  	<!-- Import the Design System style sheet -->
+        <link rel="stylesheet" type="text/css" href="/faces/javax.faces.resource/resources/salesforce-lightning-design-system-2.6.1-dev/assets/styles/salesforce-lightning-design-system.min.css" />
+        <link rel="stylesheet" type="text/css" href="/faces/javax.faces.resource/resources/styles/onboardinglex.css" />
+        <script src="/faces/javax.faces.resource/resources/js/jquery-3.4.1.min.js"></script>
+        <script src="/faces/javax.faces.resource/resources/js/customgetter.min.js"></script>
+
+
+</head>
+  
+<body>
+	<!-- REQUIRED SLDS WRAPPER -->
+  	<div class="slds-scope">
+        <!-- PRIMARY CONTENT WRAPPER -->
+        <div class="myapp">
+          <a id="slds-welcome-mat__tile_1" href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media slds-welcome-mat__tile">
+<template>
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_small" aria-labelledby="welcome-mat-101-label" aria-describedby="welcome-mat-101-content" aria-modal="true">
+            <div class="slds-modal__container">
+              <header class="slds-modal__header slds-modal__header_empty">
+                <lightning-button-icon icon-name="utility:close" alternative-text="Close this window" size="large"  
+                variant="bare-inverse" onclick={closeModal} class="slds-modal__close">  
+              </lightning-button-icon>
+              </header>
+              <div class="slds-modal__content" id="welcome-mat-101-content">
+                
+                <div class="slds-welcome-mat slds-welcome-mat_splash">
+                  <div class="slds-welcome-mat__content slds-grid">
+                    <div class="slds-welcome-mat__info slds-size_1-of-1">
+                      <div class="slds-welcome-mat__info-content">
+                        <h2 class="slds-welcome-mat__info-title" id="welcome-mat-101-label">Fatigue is here!</h2>
+                        <div class="slds-welcome-mat__info-description slds-text-longform">
+                          <h3>Welcome to the Fatgiue Experience, the modern, beautiful user experience.</h3>
+                          <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_1-of-2">
+                              <iframe id="first-iframe-example"
+                              src="https://www.youtube.com/embed/KW5lO34uOsM"
+                              frameborder="0"
+                              style="border: solid 4px #37474F">
+                              </iframe>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                              <iframe id="second-iframe-example"
+                              src="https://www.youtube.com/embed/tRhzdHSMgLI"
+                              frameborder="0"
+                              style="border: solid 4px #37474F">
+                              </iframe>
+                            </div>
+                           </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open">
+
+        </div>
+</template> 
+          </a>
+          
+        </div>
+        <!-- / PRIMARY CONTENT WRAPPER -->
+	</div>
+    <!-- / REQUIRED SLDS WRAPPER -->
+  
+  <script type="text/javascript">
+ // <![CDATA[
+       function getUrlParameter(name) {
+        	name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        	var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        	var results = regex.exec(location.search);
+        	return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    	};
+
+        $(document).ready(function(){
+
+            var profile = getUrlParameter("profile");
+
+            if (profile != "Contract Manager"){
+                $("#slds-welcome-mat__tile_1").hide();
+            }
+
+    	});
+     // ]]>
+    </script>
+  </body>
